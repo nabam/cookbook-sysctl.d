@@ -1,5 +1,5 @@
 action :add do
-  include_recipe "sysctl::service"
+  run_context.include_recipe "sysctl::service"
 
   sysctld_file = template ::File.join("/etc/sysctl.d/", "#{new_resource.name}.conf") do
     source "sysctl.d.erb"
@@ -15,7 +15,7 @@ action :add do
 end
 
 action :remove do
-  include_recipe "sysctl::service"
+  run_context.include_recipe "sysctl::service"
 
   sysctld_file = file ::File.join("/etc/sysctl.d/", "#{new_resource.name}.conf") do
     action :delete
