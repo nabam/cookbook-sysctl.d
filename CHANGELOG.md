@@ -1,6 +1,10 @@
 sysctl.d CHANGELOG
 ==================
 
+0.1.4
+-----
+- Lev Popov - Fixing issue with include_recipe in a LWRP cookbook
+
 0.1.3
 -----
 - Lev Popov - Update description
